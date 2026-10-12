@@ -1,1 +1,5 @@
-# No redirects required. Cloudflare Pages resolves clean/extensionless URLs natively.
+# Retired location pages (folded into the homepage and service-area hub as mention-only areas)
+/service-area/downtown-queen-creek /service-area/ 301
+/service-area/downtown-queen-creek/ /service-area/ 301
+/service-area/chandler-heights /service-area/ 301
+/service-area/chandler-heights/ /service-area/ 301

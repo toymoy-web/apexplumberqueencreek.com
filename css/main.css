@@ -104,7 +104,7 @@ nav[role="navigation"]{background:#fff;box-shadow:0 1px 0 var(--border);position
 .kick{color:var(--primary-dk);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
 .storyblock p,.story>.container>p{color:var(--text-muted);font-size:16px;margin-bottom:16px;max-width:560px}
 .visual{background:var(--primary-dk);border-radius:20px;padding:32px;color:#fff;min-height:260px;display:flex;flex-direction:column;justify-content:center}
-.visual.mint{background:#EAFAF3}
+.visual.mint{background:#EAFAF3;color:var(--text)}
 .visual .big{font-family:var(--font-head);font-size:40px;color:var(--accent);margin-bottom:6px}
 .visual.mint .big{color:var(--primary)}
 .visual .lbl{font-size:13.5px;opacity:.85}
