@@ -23,7 +23,6 @@
 
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-padding-top:112px}
-html,body{overflow-x:hidden}
 body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.65;text-align:left}
 h1,h2,h3,h4{font-family:var(--font-head);letter-spacing:-.02em;line-height:1.15}
 h1{font-size:clamp(1.9rem,4.5vw,3rem)}
@@ -233,3 +232,63 @@ footer{background:#fff;border-top:1px solid var(--border);padding:48px 0 28px;fo
 .service-card:hover{background:#F0DFE2}
 .service-card-title{display:block;color:var(--primary-dk);font-family:var(--font-head);font-weight:700;margin-bottom:6px}
 .service-card-desc{font-weight:400;color:var(--text-muted);font-size:13px}
+
+/* ===== v11: hero backgrounds ===== */
+.has-hero{position:relative;isolation:isolate;overflow:hidden;color:#fff;padding:clamp(3.5rem,8vw,6rem) 0}
+.has-hero .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.has-hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(78,22,32,.92) 0%,rgba(78,22,32,.78) 55%,rgba(78,22,32,.6) 100%)}
+.has-hero .kick{color:var(--accent)}
+.has-hero h1{color:#fff}
+.has-hero .storyblock p{color:rgba(255,255,255,.92)}
+.has-hero .visual{background:rgba(20,6,10,.5);border:1px solid rgba(255,255,255,.2);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.has-hero a:not(.btn){color:#fff}
+
+/* ===== v11: spacing ===== */
+main p+p{margin-top:14px}
+main h2+p,main h3+p{margin-top:12px}
+main p+ul,main ul+p,main p+.cta-row{margin-top:16px}
+.storyblock p{margin-bottom:0}
+.section-head{margin-bottom:28px}
+.panel-card h2,.callout-card h2{margin-bottom:6px}
+.faq-answer p+p{margin-top:12px}
+
+/* ===== v11: two column layout with sticky sidecard ===== */
+.twocol{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:40px;align-items:start;padding-top:8px;padding-bottom:8px}
+.twocol-main{min-width:0}
+.twocol-main .container{padding:0;max-width:none}
+.twocol-main .story{padding:clamp(1.5rem,3vw,2.25rem) 0}
+.twocol-main .story.bg-alt{background:var(--bg2);border-radius:20px;padding:clamp(1.5rem,3vw,2.25rem) clamp(1.1rem,3vw,2rem);margin:14px 0}
+.twocol-main .story.no-top-pad{padding-top:0}
+.twocol-main .storyblock{grid-template-columns:1fr;gap:24px}
+.twocol-main .panel-card,.twocol-main .callout-card{max-width:none;padding:28px 30px;box-shadow:var(--shadow)}
+.twocol-main .emergency{border-radius:20px;margin:14px 0}
+.twocol-main .emergency .container{padding:0 24px}
+.twocol-main p{max-width:none}
+.sidecard{position:sticky;top:100px;background:var(--white);border:1px solid var(--border);border-top:4px solid var(--primary);border-radius:18px;padding:24px;box-shadow:var(--shadow-lg);margin-top:14px}
+.sidecard .side-h{font-family:var(--font-head);font-size:1.3rem;line-height:1.2;margin:8px 0 0;color:var(--text)}
+.sidecard .side-line{color:var(--text-muted);font-size:15px;margin:8px 0 16px}
+.sidecard .btn{display:block;text-align:center;width:100%}
+.side-list{list-style:none;margin:18px 0 14px;display:grid;gap:9px}
+.side-list li{font-size:14px;padding-left:24px;position:relative;color:var(--text)}
+.side-list li::before{content:"\2713";position:absolute;left:0;color:var(--accent-dk);font-weight:700}
+.side-rel{display:inline-block;font-weight:600;font-size:14px}
+@media(max-width:900px){.twocol{grid-template-columns:1fr;gap:12px}.sidecard{position:static;margin-top:0;margin-bottom:24px}}
+
+/* ===== v11: local note and sources ===== */
+.localnote .callout-card{border-left:5px solid var(--accent)}
+.localnote .callout-card h2{margin:6px 0 10px}
+.source-note{font-size:13px;color:var(--text-muted);margin-top:14px;padding-top:12px;border-top:1px solid var(--border);max-width:none}
+.source-note a{color:var(--primary-dk);text-decoration:underline}
+
+.hero,.pagehead{position:relative}
+
+.nav-links>.has-dropdown:nth-last-child(-n+3) .dropdown{left:auto;right:0}
+
+/* ===== v11: overflow guards ===== */
+.storyblock>*{min-width:0}
+@media(max-width:900px){.storyblock,.storyblock.rev{grid-template-columns:minmax(0,1fr)}}
+main a,main h1,main h2,main p{overflow-wrap:anywhere}
+.vlist div{gap:12px;flex-wrap:wrap}
+
+.has-hero h1{margin:8px 0 16px}
+.has-hero .storyblock p+.cta-row,.has-hero .cta-row{margin-top:22px}
