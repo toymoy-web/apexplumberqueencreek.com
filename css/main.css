@@ -292,3 +292,9 @@ main a,main h1,main h2,main p{overflow-wrap:anywhere}
 
 .has-hero h1{margin:8px 0 16px}
 .has-hero .storyblock p+.cta-row,.has-hero .cta-row{margin-top:22px}
+
+/* footer social links */
+.footer-social{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.footer-social li{margin:0}
+.footer-grid .footer-social a{display:inline-block;padding:6px 12px;border:1px solid var(--border);border-radius:999px;font-size:13px;font-weight:600;color:var(--primary-dk);background:var(--bg2)}
+.footer-grid .footer-social a:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
